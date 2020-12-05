@@ -2,7 +2,7 @@ package Statocles::Plugin::AudioTag;
 
 # ABSTRACT: Change audio file anchors to audio elements
 
-our $VERSION = '0.0105';
+our $VERSION = '0.0106';
 
 use v5.20.0;
 
@@ -25,15 +25,6 @@ with 'Statocles::Plugin';
 
 C<Statocles::Plugin::AudioTag> changes audio file anchor elements to
 audio elements.
-
-=begin html
-
-<p>From:</p>
-<p><a href="https://ology.github.io/2020/11/23/generating-musical-phrases-round-ii/chordal-03.mp3">chordal-03.mp3</a></p>
-<p>To:</p>
-<p><audio controls><source src="https://ology.github.io/2020/11/23/generating-musical-phrases-round-ii/chordal-03.mp3" type="audio/mp3"></audio></p>
-
-=end html
 
 =head1 ATTRIBUTES
 
