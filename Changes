@@ -1,6 +1,7 @@
 Revision history for Statocles-Plugin-AudioTag
 
 {{$NEXT}}
+    - Try adding an HTML audio element to the POD!
 
 0.0104 2020-12-05 14:16:17
     - Specify the minimum perl version.
