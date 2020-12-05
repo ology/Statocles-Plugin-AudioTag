@@ -1,6 +1,9 @@
 Revision history for Statocles-Plugin-AudioTag
 
 {{$NEXT}}
+    - Specify the minimum perl version.
+
+0.0103 2020-12-05 13:38:26
     - Fix abstract and description.
 
 0.0102 2020-12-05 13:31:00
