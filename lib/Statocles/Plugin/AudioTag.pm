@@ -4,6 +4,8 @@ package Statocles::Plugin::AudioTag;
 
 our $VERSION = '0.0103';
 
+use v5.20.0;
+
 use Statocles::Base 'Class';
 with 'Statocles::Plugin';
 
