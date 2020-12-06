@@ -18,7 +18,7 @@ my $page = Statocles::Page::Plain->new(
 my $plugin = new_ok 'Statocles::Plugin::AudioTag';
 
 my $got = $plugin->audio_tag($page);
-like $got->dom, qr|<p><audio controls><source src="test.mp3" type="audio/mp3"></audio></p>|, 'audio_tag';
+like $got->dom, qr|<p><audio controls><source src="test\.mp3" type="audio/mp3"></audio></p>|, 'audio_tag';
 
 new_ok 'Statocles::Plugin::AudioTag' => [ file_type => 'ogg' ];
 
