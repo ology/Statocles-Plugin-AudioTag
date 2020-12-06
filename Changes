@@ -1,7 +1,7 @@
 Revision history for Statocles-Plugin-AudioTag
 
 {{$NEXT}}
-    - Add and test the ->audio_tag method.
+    - Break-out and test the ->audio_tag method.
 
 0.0106 2020-12-05 15:33:21
     - Nope. Appears the <audio> is not supported on metacpan.
