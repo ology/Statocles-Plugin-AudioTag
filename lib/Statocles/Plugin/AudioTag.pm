@@ -57,7 +57,9 @@ sub audio_tag {
     if ($page->has_dom) {
         $page->dom->find('a[href$=.'. $self->file_type .']')->each(sub {
             my ($el) = @_;
-            $el->replace(sprintf '<audio controls><source type="audio/%s" src="%s"></audio>', $self->file_type, $el->attr('href'));
+            my $replacement = sprintf '<audio controls><source type="audio/%s" src="%s"></audio>',
+                $self->file_type, $el->attr('href');
+            $el->replace($replacement);
         });
     }
     return $page;
