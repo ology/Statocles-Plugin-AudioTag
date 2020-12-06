@@ -14,8 +14,8 @@ my $plugin = new_ok 'Statocles::Plugin::AudioTag' => [ file_type => 'ogg' ];
 
 my $site = build_test_site();
 my $page = Statocles::Page::Plain->new(
-    path => 'test.html',
-    site => $site,
+    path    => 'test.html',
+    site    => $site,
     content => '<p><a href="test.ogg">test.ogg</a></p>',
 );
 
