@@ -8,18 +8,18 @@ use Statocles::Test qw(build_test_site);
 
 use_ok 'Statocles::Plugin::AudioTag';
 
+new_ok 'Statocles::Plugin::AudioTag';
+
+my $plugin = new_ok 'Statocles::Plugin::AudioTag' => [ file_type => 'ogg' ];
+
 my $site = build_test_site();
 my $page = Statocles::Page::Plain->new(
     path => 'test.html',
     site => $site,
-    content => '<p><a href="test.mp3">test.mp3</a></p>',
+    content => '<p><a href="test.ogg">test.ogg</a></p>',
 );
 
-my $plugin = new_ok 'Statocles::Plugin::AudioTag';
-
 my $got = $plugin->audio_tag($page);
-like $got->dom, qr|<p><audio controls><source src="test\.mp3" type="audio/mp3"></audio></p>|, 'audio_tag';
-
-new_ok 'Statocles::Plugin::AudioTag' => [ file_type => 'ogg' ];
+like $got->dom, qr|<p><audio controls><source src="test\.ogg" type="audio/ogg"></audio></p>|, 'audio_tag';
 
 done_testing();
