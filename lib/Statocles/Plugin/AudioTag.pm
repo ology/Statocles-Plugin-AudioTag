@@ -90,4 +90,6 @@ L<Statocles>
 
 L<Statocles::Plugin>
 
+L<https://ology.github.io/2020/12/06/making-a-statocles-plugin/>
+
 =cut
