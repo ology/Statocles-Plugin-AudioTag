@@ -44,6 +44,12 @@ has file_type => (
 
 =head1 METHODS
 
+=head2 audio_tag
+
+  $page = $plugin->audio_tag($page);
+
+Process the audio bits of a L<Statocles::Page>.
+
 =cut
 
 sub audio_tag {
