@@ -44,6 +44,19 @@ has file_type => (
 
 =head1 METHODS
 
+=cut
+
+sub audio_tag {
+    my ($self, $page) = @_;
+    if ($page->has_dom) {
+        $page->dom->find('a[href$=.'. $self->file_type .']' )->each(sub {
+            my ($el) = @_;
+            $el->replace(sprintf '<audio controls><source type="audio/%s" src="%s"></audio>', $self->file_type, $el->attr('href'));
+        });
+    }
+    return $page;
+}
+
 =head2 register
 
 Register this plugin to install its event handlers. Called automatically.
@@ -55,12 +68,7 @@ sub register {
     $site->on(build => sub {
         my ($event) = @_;
         for my $page ($event->pages->@*) {
-            if ($page->has_dom) {
-                $page->dom->find('a[href$=.'. $self->file_type .']' )->each(sub {
-                    my ($el) = @_;
-                    $el->replace(sprintf '<audio controls><source type="audio/%s" src="%s"></audio>', $self->file_type, $el->attr('href'));
-                } );
-            }
+            $page = $self->audio_tag($page);
         }
     });
 }
