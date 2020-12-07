@@ -1,6 +1,9 @@
 Revision history for Statocles-Plugin-AudioTag
 
 {{$NEXT}}
+    - Add statements to allow post-deref syntax.
+
+0.0201 2020-12-06 07:03:04
     - Tweak code and POD a bit.
 
 0.0200 2020-12-05 16:52:34
