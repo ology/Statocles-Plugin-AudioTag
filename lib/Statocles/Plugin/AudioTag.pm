@@ -4,10 +4,6 @@ package Statocles::Plugin::AudioTag;
 
 our $VERSION = '0.0202';
 
-use v5.20;
-use feature qw(postderef);
-no warnings qw(experimental::postderef);
-
 use Statocles::Base 'Class';
 with 'Statocles::Plugin';
 
@@ -77,7 +73,7 @@ sub register {
     my ($self, $site) = @_;
     $site->on(build => sub {
         my ($event) = @_;
-        for my $page ($event->pages->@*) {
+        for my $page (@{ $event->pages }) {
             $page = $self->audio_tag($page);
         }
     });

@@ -1,6 +1,9 @@
 Revision history for Statocles-Plugin-AudioTag
 
 {{$NEXT}}
+    - On second thought, replace the single post-deref with the old syntax.
+
+0.0202 2020-12-07 06:55:12
     - Add statements to allow post-deref syntax.
 
 0.0201 2020-12-06 07:03:04
