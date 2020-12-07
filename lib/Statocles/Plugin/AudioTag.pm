@@ -2,7 +2,7 @@ package Statocles::Plugin::AudioTag;
 
 # ABSTRACT: Change audio file anchors to audio elements
 
-our $VERSION = '0.0202';
+our $VERSION = '0.0203';
 
 use Statocles::Base 'Class';
 with 'Statocles::Plugin';
