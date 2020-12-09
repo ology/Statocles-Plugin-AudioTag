@@ -1,6 +1,8 @@
 Revision history for Statocles-Plugin-AudioTag
 
 {{$NEXT}}
+
+0.0204 2020-12-08 02:29:56
     - Specify the minimum version of Statocles to have.
 
 0.0203 2020-12-07 07:08:41
